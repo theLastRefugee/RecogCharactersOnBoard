@@ -1,4 +1,10 @@
-# Recognition-of-Characters-on-the-board
-This project can help you recognize the simple characters on the board, using self-maded datasets.
-# 1.version:
-opencv 3.4.2
+# 基于机器视觉的字符识别研究
+##### 使用python,opencv,pytorch
+
+## 1.数据集
+基于实验室拍摄的板材照片，将图片进行简单的分割后制成了数据集。其中类别包括“）”，“大”，“小”，“机”，“中”，A~Z，0~9。
+## 2.初步实现
+#### （1）利用简单的形态学操作对数据集中图片进行处理，扩展数据集，并分为训练集（train）和测试集（val）
+#### （2）使用cnn进行训练,得到可以识别单个字符的神经网络,准确率约0.93
+## 3.进一步实现
+#### 使用cnn进行训练,增加了target_transform函数,得到了可以识别字符类别的神经网络,可以识别出是字符/数字/字母,准确率0.99以上。
